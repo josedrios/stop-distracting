@@ -27,3 +27,17 @@ body {
   font-size: calc(100vh / 25);
   text-overflow: clip;
 }
+
+/* Timeouts */
+.button-container {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.01);
+  height: fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  position: fixed;
+  margin-top: 10px;
+  border-radius: 5px;
+  inset: 0;
+  z-index: 1000000000;
+}
