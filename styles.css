@@ -1,0 +1,29 @@
+/* Body Overrides */
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+/* Overlay */
+.sd-overlay {
+  position: fixed;
+  z-index: 1000000;
+  inset: 0;
+  pointer-events: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: oklch(0.5237 0.1776 27.53 / 30%);
+}
+
+/* Overlay text */
+.sd-overlay {
+  font-family: Helvetica, sans-serif;
+  -webkit-text-stroke: 1px black;
+  color: gold;
+  overflow-wrap: break-word;
+  font-weight: bold;
+  text-align: center;
+  font-size: calc(100vh / 25);
+  text-overflow: clip;
+}

@@ -1,0 +1,20 @@
+{
+	"manifest_version": 3,
+	"name": "Stop Distracting",
+	"version": "1.0",
+	"description": "Tries to keep your focus back on track",
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.youtube.com/*",
+				"*://*.blankwhitescreen.com/*"
+			],
+			"js": [
+				"script.js"
+			],
+			"css": [
+				"styles.css"
+			]
+		}
+	]
+}
