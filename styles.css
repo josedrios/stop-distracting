@@ -1,25 +1,19 @@
-/* TODO: make class names very precise so it doesnt mess up other websites styling */
-/* Body Overrides */
-body {
+.sd-root {
   position: relative;
   padding: 0;
   margin: 0;
 }
 
-/* Overlay */
 .sd-overlay {
   position: fixed;
   z-index: 1000000;
   inset: 0;
-  /* pointer-events: none; */
   height: 100vh;
   width: 100vw;
   background-color: oklch(0.5237 0.1776 27.53 / 50%);
   backdrop-filter: blur(5px);
-}
 
-/* Overlay text */
-.sd-overlay {
+  /* text */
   font-family: Helvetica, sans-serif;
   -webkit-text-stroke: 1px black;
   color: gold;
@@ -30,8 +24,7 @@ body {
   text-overflow: clip;
 }
 
-/* Control center */
-.control-center {
+.sd-control {
   all: initial;
   display: flex;
   flex-direction: column;
@@ -48,20 +41,17 @@ body {
   background-color: black;
 }
 
-/* Buttons */
-.button-container {
+.sd-control__buttons {
   all: initial;
   display: flex;
   flex-direction: row;
   justify-content: left;
 }
 
-/* Input */
-.control-input {
+.sd-control__input {
 }
 
-/* Note */
-.control-center-note {
+.sd-control__note {
   all: initial;
   font-family: Helvetica, sans-serif !important;
   max-width: 300px;
