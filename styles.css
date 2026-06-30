@@ -11,10 +11,11 @@ body {
   position: fixed;
   z-index: 1000000;
   inset: 0;
-  pointer-events: none;
+  /* pointer-events: none; */
   height: 100vh;
   width: 100vw;
-  background-color: oklch(0.5237 0.1776 27.53 / 30%);
+  background-color: oklch(0.5237 0.1776 27.53 / 50%);
+  backdrop-filter: blur(5px);
 }
 
 /* Overlay text */
@@ -31,22 +32,28 @@ body {
 
 /* Control center */
 .control-center {
+  all: initial;
   display: flex;
   flex-direction: column;
   z-index: 1000000000;
   height: fit-content;
   width: fit-content;
-  margin-top: 10px;
+  margin-block: auto;
   margin-inline: auto;
-  padding: 10px;
+  padding: 20px;
   position: fixed;
+  gap: 4px;
   inset: 0;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: black;
 }
 
 /* Buttons */
 .button-container {
+  all: initial;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
 
 /* Input */
@@ -55,8 +62,12 @@ body {
 
 /* Note */
 .control-center-note {
+  all: initial;
+  font-family: Helvetica, sans-serif !important;
   max-width: 300px;
   width: 100%;
   color: red !important;
+  font-size: 20px !important;
   font-weight: bold;
+  padding: 10px !important;
 }

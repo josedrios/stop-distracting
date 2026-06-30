@@ -1,11 +1,9 @@
 // Input Checker
-function checkInput(min) {
-  // if (input.value === "I Hate Myself") {
-  console.log(document.getElementsByClassName("control-input").value);
-  if (document.getElementsByClassName("control-input").value === "I") {
+function checkInput(min, input) {
+  if (input.value === "Bye Bye Brain") {
+    console.log(min + " minute timer has begun.");
     removeComponents();
-    console.log(min + "minute timer has begun.");
-    setTimeout(
+    timerId = setTimeout(
       () => {
         implementComponents();
         console.log(min + " minutes are over.");
@@ -51,7 +49,7 @@ function implementComponents() {
   input.classList.add("control-input");
   note.classList.add("control-center-note");
   note.innerText =
-    "NOTE: type `I Hate Myself` in the input section then choose your break length";
+    'Type "Bye Bye Brain" in the input, then choose your break length.';
   twoMin.innerText = "2 min";
   twoMin.classList.add("two-min");
   fiveMin.innerText = "5 min";
@@ -72,11 +70,12 @@ function implementComponents() {
   document.body.appendChild(overlay);
   document.body.appendChild(controls);
 
-  twoMin.addEventListener("click", () => checkInput(2));
-  fiveMin.addEventListener("click", () => checkInput(5));
-  twentyMin.addEventListener("click", () => checkInput(20));
-  sixtyMin.addEventListener("click", () => checkInput(60));
+  twoMin.addEventListener("click", () => checkInput(2, input));
+  fiveMin.addEventListener("click", () => checkInput(5, input));
+  twentyMin.addEventListener("click", () => checkInput(20, input));
+  sixtyMin.addEventListener("click", () => checkInput(60, input));
 }
 
+console.log("Stop Distracting extension has been deployed");
 removeComponents();
 implementComponents();
